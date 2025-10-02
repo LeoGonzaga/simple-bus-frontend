@@ -20,12 +20,22 @@ export const useGetBus = () => {
       }
 
       const rows = json.table.rows.map((row: any, index: number) => {
-        if (index === 0) return;
         return {
           id: index + 1,
           start: row.c?.[0]?.v || "",
           ended: row.c?.[1]?.v || "",
-          time: row.c?.[2]?.v || "",
+          company: row.c?.[2]?.v || "",
+          price: row.c?.[3]?.f || "",
+          time: row.c?.[4]?.f || "",
+          daily: row.c?.[5]?.v || "",
+          monday: row.c?.[6]?.v || "",
+          tuesday: row.c?.[7]?.v || "",
+          wednesday: row.c?.[8]?.v || "",
+          thursday: row.c?.[9]?.v || "",
+          friday: row.c?.[10]?.v || "",
+          saturday: row.c?.[11]?.v || "",
+          sunday: row.c?.[12]?.v || "",
+          holiday: row.c?.[13]?.v || "",
         };
       });
       const sanitizedRows: IBusList[] = rows.filter(
