@@ -8,10 +8,13 @@ export const BusList = (): JSX.Element => {
   const { data } = useGetBus();
 
   return (
-    <main className="container__bus-list">
-      {data.map((bus, index) => (
-        <Card {...bus} key={index} />
-      ))}
-    </main>
+    <>
+      <main className="container__bus-list">
+        {data.map((bus, index) => (
+          <Card {...bus} key={index} />
+        ))}
+      </main>
+      <div className="spacing"></div>
+    </>
   );
 };

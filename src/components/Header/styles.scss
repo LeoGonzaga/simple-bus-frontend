@@ -1,14 +1,19 @@
 @import "../../shared/variables";
 
 .container__header {
-  background-color: #ffaa00;
-  height: 100px;
+  background-color: $primary-color;
+  color: $primary-text-color;
 
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  padding: 16px;
-  > div {
-    display: flex;
-    gap: 8px;
+  border-bottom-left-radius: 3.125rem;
+  border-bottom-right-radius: 3.125rem;
+  padding: 1rem 2rem;
+  height: 6.25rem;
+
+  h1 {
+    font-size: 28px;
+  }
+
+  span {
+    font-size: 0.75rem;
   }
 }

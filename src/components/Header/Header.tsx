@@ -1,16 +1,17 @@
 import { JSX } from "react";
 import "./styles.scss";
 
-import logo from "@src/shared/icons/bus.svg";
+import { useGetBus } from "@src/hooks/useGetBus";
 
 export const Header = (): JSX.Element => {
+  const { updatedAt } = useGetBus();
+
   return (
     <header className="container__header">
-      <div>
-        <img src={logo} alt="" />
-        <h1>Busão</h1>
-      </div>
-      <span>Sistema de transporte urbano na cidade de Pedralva.</span>
+      <h1>Horário de ônibus</h1>
+      <span>
+        Atualizado em: <strong>{updatedAt}</strong>
+      </span>
     </header>
   );
 };

@@ -2,8 +2,53 @@
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 16px;
-  margin: 16px;
-  height: 90px;
+  min-width: 280px;
+  .container__card__company_name {
+    font-size: 12px;
+  }
+
+  .container__card__cities {
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+
+  .container__card__week_days {
+    text-align: right;
+  }
+
+  .container__card__time {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      font-size: 40px;
+    }
+  }
+  .container__card__cities__ended {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    h1 {
+      z-index: 10;
+    }
+  }
+
+  .container__card__road {
+    @media (max-width: 480px) {
+      position: absolute;
+    }
+  }
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
 }
