@@ -24,23 +24,20 @@ export const useGetBus = () => {
           id: index + 1,
           start: row.c?.[0]?.v || "",
           ended: row.c?.[1]?.v || "",
-          company: row.c?.[2]?.v || "",
+          companyName: row.c?.[2]?.v || "",
           price: row.c?.[3]?.f || "",
           time: row.c?.[4]?.f || "",
           daily: row.c?.[5]?.v || "",
-          monday: row.c?.[6]?.v || "",
-          tuesday: row.c?.[7]?.v || "",
-          wednesday: row.c?.[8]?.v || "",
-          thursday: row.c?.[9]?.v || "",
-          friday: row.c?.[10]?.v || "",
-          saturday: row.c?.[11]?.v || "",
-          sunday: row.c?.[12]?.v || "",
-          holiday: row.c?.[13]?.v || "",
+          mondayToFriday: row.c?.[6]?.v || "",
+          mondayToSaturday: row.c?.[7]?.v || "",
+          sundyAndHolidays: row.c?.[8]?.v || "",
+          updatedAt: row.c?.[9]?.f || "",
         };
       });
       const sanitizedRows: IBusList[] = rows.filter(
         (row: any) => row !== undefined,
       );
+
       return sanitizedRows;
     } catch (error) {
       console.error("Não foi possível converter o retorno.", error);
@@ -50,5 +47,7 @@ export const useGetBus = () => {
 
   const formattedRows = handleFormatData();
 
-  return { data: formattedRows, isLoading, isError };
+  const updatedAt = formattedRows[0]?.updatedAt;
+
+  return { data: formattedRows, isLoading, isError, updatedAt };
 };
