@@ -3,4 +3,9 @@ export interface IBusList {
   ended: string;
   time: string;
   daily: boolean;
+  mondayToFriday: boolean;
+  mondayToSaturday: boolean;
+  sundyAndHolidays: boolean;
+  updatedAt: string;
+  companyName: string;
 }
