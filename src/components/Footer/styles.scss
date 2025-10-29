@@ -4,13 +4,18 @@
   background-color: $primary-color;
   color: $primary-text-color;
   text-align: center;
-  padding: 1rem 0;
 
   font-size: 0.75rem;
+  word-break: break-all;
+  padding: 16px;
+
+  .gap {
+    margin-top: 8px;
+  }
 
   a {
     all: unset;
-    color: #b55c5c;
+    color: #f16363;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
