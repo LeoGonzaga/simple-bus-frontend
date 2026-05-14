@@ -10,7 +10,7 @@ export const Footer = (): JSX.Element => {
       <div className="gap"></div>
 
       <span>
-        @{new Date().getFullYear()} Desenvolvido por
+        @{new Date().getFullYear()} Desenvolvido por{" "}
         <a href="https://www.linkedin.com/in/leogonzaga/" target="_blank">
           Leo Gonzaga
         </a>
