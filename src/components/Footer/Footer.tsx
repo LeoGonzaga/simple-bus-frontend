@@ -9,10 +9,14 @@ export const Footer = (): JSX.Element => {
 
       <div className="gap"></div>
 
-      <span>@2025 by </span>
-      <a href="https://www.linkedin.com/in/leogonzaga/" target="_blank">
-        Leo Gonzaga
-      </a>
+      <span>@{new Date().getFullYear()} Desenvolvido por
+        <a href="https://www.linkedin.com/in/leogonzaga/" target="_blank">
+          Leo Gonzaga
+        </a> e
+        <a href="https://www.linkedin.com/in/carlosgonzaga11/" target="_blank">
+          Carlos Alberto
+        </a>
+      </span>
     </footer>
   );
 };
