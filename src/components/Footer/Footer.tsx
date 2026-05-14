@@ -13,7 +13,7 @@ export const Footer = (): JSX.Element => {
         @{new Date().getFullYear()} Desenvolvido por{" "}
         <a href="https://www.linkedin.com/in/leogonzaga/" target="_blank">
           Leo Gonzaga
-        </a>
+        </a>{" "}
         e{" "}
         <a href="https://www.linkedin.com/in/carlosgonzaga11/" target="_blank">
           Carlos Alberto
