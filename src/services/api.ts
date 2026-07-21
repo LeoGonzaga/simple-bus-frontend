@@ -5,3 +5,6 @@ export const request = async (options: AxiosRequestConfig) => {
   const data = await URL(options);
   return data.data;
 };
+
+
+export const paolagithub = ()=>{}
