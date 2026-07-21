@@ -5,7 +5,7 @@ import BusList from "@src/components/BusList";
 import Footer from "@src/components/Footer";
 import Loader from "@src/components/Loader";
 import { useGetBus } from "@src/hooks/useGetBus";
-
+Esse arquivo foi alterado 2
 export const Home = (): JSX.Element => {
   const { isLoading } = useGetBus();
 
